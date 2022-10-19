@@ -1,0 +1,19 @@
+<head>
+<meta charset="UTF-8">
+<title>Moja strona</title>
+<link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<script src="files/onClick.js"></script>
+<noscript>
+	<style type="text/css">
+		button#hamburger {
+			display: none;			
+		}
+		a.hamburger-link {
+			display: block;
+		}
+		section#banner-content button {
+			display:none;
+		}
+	</style>
+</noscript>
+</head>

@@ -1,0 +1,32 @@
+@import "__variables";
+@import "__mixins";
+
+* {
+	font-family: $fonts;
+	box-sizing: border-box;
+}
+
+html {
+	color: $colorText1;
+	background-color: $colorBackground;
+	font-size: small;
+	@include mediaDim('S') {font-size: x-small;};
+	@include mediaDim('L') {font-size: medium;};
+	@include mediaDim('XL') {font-size: large;};
+}
+
+h1 {
+	font-size: 1.2*$basicFontSize;
+}
+
+h2 {
+	font-size: 1.8*$basicFontSize;
+}
+
+h3 {
+	font-size: 0.75*$basicFontSize;
+}
+
+h4 {
+	font-size: 1.2*$basicFontSize;
+}

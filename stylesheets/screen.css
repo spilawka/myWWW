@@ -1,0 +1,416 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 4, ../sass/myStyles/_defClasses.scss */
+* {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+/* line 9, ../sass/myStyles/_defClasses.scss */
+html {
+  color: whitesmoke;
+  background-color: #1e1e1e;
+  font-size: small;
+}
+@media all and (max-width: 320px) {
+  /* line 9, ../sass/myStyles/_defClasses.scss */
+  html {
+    font-size: x-small;
+  }
+}
+@media all and (min-width: 560px) and (max-width: 720px) {
+  /* line 9, ../sass/myStyles/_defClasses.scss */
+  html {
+    font-size: medium;
+  }
+}
+@media all and (min-width: 720px) {
+  /* line 9, ../sass/myStyles/_defClasses.scss */
+  html {
+    font-size: large;
+  }
+}
+
+/* line 18, ../sass/myStyles/_defClasses.scss */
+h1 {
+  font-size: 1.2rem;
+}
+
+/* line 22, ../sass/myStyles/_defClasses.scss */
+h2 {
+  font-size: 1.8rem;
+}
+
+/* line 26, ../sass/myStyles/_defClasses.scss */
+h3 {
+  font-size: 0.75rem;
+}
+
+/* line 30, ../sass/myStyles/_defClasses.scss */
+h4 {
+  font-size: 1.2rem;
+}
+
+/**Kontenery z podświetlajacymi sie krawedziami*/
+/* line 5, ../sass/myStyles/_mainClasses.scss */
+.border {
+  border: 1px solid;
+  border-color: whitesmoke;
+  border-radius: 4px;
+  transition: border-color 1s;
+}
+/* line 10, ../sass/myStyles/_mainClasses.scss */
+.border:hover {
+  border-color: #c95000;
+}
+
+/**Klasa glownych kontenerow na stronie*/
+/* line 16, ../sass/myStyles/_mainClasses.scss */
+.main-container {
+  background-color: #282828;
+  margin: 4px;
+  padding: 6px;
+}
+@media all and (min-width: 560px) and (max-width: 720px) {
+  /* line 16, ../sass/myStyles/_mainClasses.scss */
+  .main-container {
+    margin: 12px;
+  }
+}
+@media all and (min-width: 720px) {
+  /* line 16, ../sass/myStyles/_mainClasses.scss */
+  .main-container {
+    margin: 20px;
+  }
+}
+
+/* line 24, ../sass/myStyles/_mainClasses.scss */
+.hide-portrait {
+  display: none;
+}
+@media all and (min-width: 720px) and (min-aspect-ratio: 1 / 1) {
+  /* line 24, ../sass/myStyles/_mainClasses.scss */
+  .hide-portrait {
+    display: inline;
+  }
+}
+
+/* line 5, ../sass/myStyles/_contentClasses.scss */
+section.image-container, section.image-container-single, article#content header {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 10, ../sass/myStyles/_contentClasses.scss */
+section.image-container, section.image-container-single, article#content header {
+  align-items: center;
+}
+
+/* line 15, ../sass/myStyles/_contentClasses.scss */
+section.image-container img, section.image-container-single img {
+  width: 100%;
+  border-radius: 2rem;
+  padding: 0.5rem;
+}
+
+/* line 32, ../sass/myStyles/_contentClasses.scss */
+.project {
+  padding: 16px;
+  background-color: #1e1e1e;
+  margin-bottom: 1rem;
+  border-radius: 2rem;
+  transition: border-color 1s;
+}
+
+/* line 32, ../sass/myStyles/_contentClasses.scss */
+.hobby {
+  padding: 16px;
+  background-color: #1e1e1e;
+  margin-bottom: 1rem;
+  border-radius: 2rem;
+  transition: border-color 1s;
+}
+
+/* line 32, ../sass/myStyles/_contentClasses.scss */
+.interest {
+  padding: 16px;
+  background-color: #1e1e1e;
+  margin-bottom: 1rem;
+  border-radius: 2rem;
+  transition: border-color 1s;
+}
+
+/* line 32, ../sass/myStyles/_contentClasses.scss */
+.about {
+  padding: 16px;
+  background-color: #1e1e1e;
+  margin-bottom: 1rem;
+  border-radius: 2rem;
+  transition: border-color 1s;
+}
+
+/* line 42, ../sass/myStyles/_contentClasses.scss */
+section#banner-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: flex-end;
+}
+/* line 49, ../sass/myStyles/_contentClasses.scss */
+section#banner-content h1 {
+  align-self: flex-start;
+  width: 100%;
+  flex-basis: 75%;
+  padding: 20px;
+  font-size: 2rem;
+}
+/* line 57, ../sass/myStyles/_contentClasses.scss */
+section#banner-content button {
+  flex-basis: 25%;
+  background-color: #c95000;
+  color: whitesmoke;
+}
+@media all and (min-width: 720px) and (min-aspect-ratio: 1 / 1) {
+  /* line 63, ../sass/myStyles/_contentClasses.scss */
+  section.image-container {
+    flex-direction: row;
+  }
+}
+@media all and (min-width: 720px) and (min-aspect-ratio: 1 / 1) {
+  /* line 66, ../sass/myStyles/_contentClasses.scss */
+  section.image-container img {
+    width: 33.3%;
+    transition: width 1s;
+  }
+  /* line 26, ../sass/myStyles/_contentClasses.scss */
+  section.image-container img:hover {
+    width: 100%;
+  }
+}
+/* line 74, ../sass/myStyles/_contentClasses.scss */
+section.image-container-single img {
+  align-self: center;
+}
+@media all and (min-width: 720px) and (min-aspect-ratio: 1 / 1) {
+  /* line 74, ../sass/myStyles/_contentClasses.scss */
+  section.image-container-single img {
+    width: 33.3%;
+    transition: width 1s;
+  }
+  /* line 26, ../sass/myStyles/_contentClasses.scss */
+  section.image-container-single img:hover {
+    width: 50%;
+  }
+}
+
+/* line 83, ../sass/myStyles/_contentClasses.scss */
+article#content {
+  padding: 10px;
+}
+
+/* line 91, ../sass/myStyles/_contentClasses.scss */
+.project-img {
+  width: 10rem;
+  height: 5rem;
+}
+
+/* line 4, ../sass/myStyles/_headerFooter.scss */
+header#banner {
+  display: flex;
+  flex-direction: row;
+}
+/* line 7, ../sass/myStyles/_headerFooter.scss */
+header#banner img {
+  border-radius: 5rem;
+  width: 10rem;
+  height: 10rem;
+}
+
+/* line 13, ../sass/myStyles/_headerFooter.scss */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+/* line 18, ../sass/myStyles/_headerFooter.scss */
+footer section {
+  margin: 8px;
+}
+/* line 22, ../sass/myStyles/_headerFooter.scss */
+footer p {
+  margin: 4px;
+  padding: 8px;
+  border-radius: 16px;
+  background-color: #1e1e1e;
+  transition: background-color 1s;
+}
+/* line 28, ../sass/myStyles/_headerFooter.scss */
+footer p:hover {
+  background-color: #c95000;
+}
+
+/* line 4, ../sass/myStyles/_navClasses.scss */
+a.link, a.hamburger-link {
+  transition: background-color 1s;
+  text-decoration: initial;
+}
+/* line 7, ../sass/myStyles/_navClasses.scss */
+a.link:hover, a.hamburger-link:hover {
+  background-color: #282828;
+}
+
+/* line 13, ../sass/myStyles/_navClasses.scss */
+a:any-link {
+  color: inherit;
+}
+/* line 20, ../sass/myStyles/_navClasses.scss */
+a.hamburger-link {
+  display: none;
+}
+@media all and (min-width: 720px) and (min-aspect-ratio: 1 / 1) {
+  /* line 20, ../sass/myStyles/_navClasses.scss */
+  a.hamburger-link {
+    display: block;
+  }
+}
+/* line 25, ../sass/myStyles/_navClasses.scss */
+a#current-link {
+  transition: background-color 1s;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* line 33, ../sass/myStyles/_navClasses.scss */
+button#hamburger {
+  background-color: #c95000;
+  align-self: flex-start;
+  border-color: #1e1e1e;
+}
+@media all and (min-width: 720px) and (min-aspect-ratio: 1 / 1) {
+  /* line 33, ../sass/myStyles/_navClasses.scss */
+  button#hamburger {
+    display: none;
+  }
+}
+/* line 40, ../sass/myStyles/_navClasses.scss */
+button#hamburger img {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* line 46, ../sass/myStyles/_navClasses.scss */
+aside#sidebar nav {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  background-color: #c95000;
+}
+@media all and (min-width: 720px) and (min-aspect-ratio: 1 / 1) {
+  /* line 46, ../sass/myStyles/_navClasses.scss */
+  aside#sidebar nav {
+    flex-direction: row;
+  }
+}
+/* line 55, ../sass/myStyles/_navClasses.scss */
+aside#sidebar nav a {
+  border: 2px solid;
+  border-color: #282828;
+  border-top: 0px;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+}
+@media all and (min-width: 720px) and (min-aspect-ratio: 1 / 1) {
+  /* line 55, ../sass/myStyles/_navClasses.scss */
+  aside#sidebar nav a {
+    display: block;
+    width: auto;
+    border-bottom: 0px;
+    border-left: 0px;
+  }
+  /* line 69, ../sass/myStyles/_navClasses.scss */
+  aside#sidebar nav a#last-link {
+    margin-left: auto;
+    border-left: 2px solid;
+    border-color: #282828;
+  }
+}
+
+/* line 4, ../sass/myStyles/_loginLogout.scss */
+form input, input#comm, input#post-comm, form select {
+  font-size: 0.75rem;
+  border: 1px solid;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+/* line 12, ../sass/myStyles/_loginLogout.scss */
+form input, input#comm, input#post-comm {
+  border-color: #c95000;
+}
+
+/* line 17, ../sass/myStyles/_loginLogout.scss */
+form select {
+  border-color: whitesmoke;
+}
+
+/* line 23, ../sass/myStyles/_loginLogout.scss */
+form#login-form, form#logout-form {
+  flex-basis: 25%;
+  margin-right: 24px;
+  border-radius: 24px;
+  background-color: #1e1e1e;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+}
+/* line 34, ../sass/myStyles/_loginLogout.scss */
+form input {
+  margin: 6px;
+}
+/* line 40, ../sass/myStyles/_loginLogout.scss */
+form select {
+  background-color: #282828;
+  color: whitesmoke;
+  margin: 6px;
+}
+/* line 47, ../sass/myStyles/_loginLogout.scss */
+form p#error-msg {
+  color: red;
+}
+
+/* line 4, ../sass/myStyles/_comments.scss */
+form input, input#comm, input#post-comm, form select {
+  font-size: 0.75rem;
+  border: 1px solid;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+/* line 12, ../sass/myStyles/_comments.scss */
+form input, input#comm, input#post-comm {
+  border-color: #c95000;
+}
+
+/* line 17, ../sass/myStyles/_comments.scss */
+p#comment {
+  background-color: #282828;
+  border-radius: 16px;
+  padding: 6px;
+  padding-left: 12px;
+}
+
+/* line 24, ../sass/myStyles/_comments.scss */
+p#add-comment {
+  font-weight: bold;
+}
+
+/* line 28, ../sass/myStyles/_comments.scss */
+form#comment-form {
+  display: flex;
+  flex-direction: row;
+}

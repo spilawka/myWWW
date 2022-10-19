@@ -1,0 +1,9 @@
+<footer class="main-container border">
+        <section id="kontakt">
+            <h1>Kontakt:</h1>
+        </section>
+        <p> email: spilawka@gmail.com</p>
+        <p> tel: +48 501 539 119</p>
+        <p> discord: wombot#0000</p>
+        <p> facebook: Szymon Pilawka</p>
+</footer>

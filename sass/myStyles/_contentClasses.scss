@@ -1,0 +1,95 @@
+@import "__variables";
+@import "__mixins";
+
+//placeholdery
+%flex-col {
+	display: flex;
+    	flex-direction: column;
+}
+
+%img-container {
+	@extend %flex-col;
+    	align-items: center;
+}
+
+%def-img {
+	width: 100%;
+    	border-radius: 2rem;
+    	padding: 0.5rem;
+}
+
+//Mixin wywolujacy mediaDesc z parametrem width
+@mixin imgMixin($width) {
+	@include mediaDesc() {
+		width:33.3%;
+		transition: width 1s;
+		&:hover {width: $width;};
+	}
+}
+
+$content-classes: (project,hobby,interest,about);
+@each $class in $content-classes {
+	.#{$class} {
+		padding: 16px;
+    		background-color: $colorBackground;
+    		margin-bottom: 1rem;
+    		border-radius: 2rem;
+    		transition: border-color 1s;
+	}
+}
+
+section {
+	&#banner-content {
+		display: flex;
+		flex-direction:row;
+		width: 100%;
+   	 	align-items:flex-end;
+		
+		$h1Basis: 75%;
+		h1 {
+			align-self: flex-start;
+			width: 100%;
+			flex-basis: $h1Basis;
+  	  		padding: 20px;
+  	  		font-size: 2rem;
+		}
+
+		button {
+			flex-basis: 100%-$h1Basis;
+  	  		background-color: $colorMain;
+  	  		color: $colorText1;
+		}
+	}
+	&.image-container {
+		@extend %img-container;
+		@include mediaDesc() {flex-direction: row;};
+		img {
+			@extend %def-img;
+			@include imgMixin(100%);
+			
+		}
+	}
+	&.image-container-single {
+		@extend %img-container;
+		img {
+			@extend %def-img;
+			align-self: center;
+			@include imgMixin(50%);
+		}
+	}
+}
+
+article {
+	&#content {
+		padding: 10px;
+		header {
+			@extend %img-container;
+		}
+	}
+}
+
+.project-img {
+	$h: 5*$basicFontSize;
+	width: 2*$h;
+	height: $h;
+}

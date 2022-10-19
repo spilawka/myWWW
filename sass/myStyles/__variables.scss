@@ -1,0 +1,26 @@
+$fonts: ('Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif);
+
+$breaks: (
+	'small': 320px,
+	'medium': 560px,
+	'large': 720px,
+	'desktop-switch': 720px,
+);
+
+$dimensions: (
+	'S': ('min': 0px, 'max':map-get($breaks,'small')),
+	'M': ('min': map-get($breaks,'small'), 'max': map-get($breaks,'medium')),
+	'L': ('min': map-get($breaks,'medium'), 'max': map-get($breaks,'large')),
+	'XL': ('min': map-get($breaks,'large'), 'max': 0px),
+);
+
+$colorBackground: rgb(30,30,30);
+$colorMain: rgb(201, 80, 0);
+$colorContent: rgb(40,40,40);
+$colorTransition: rgb(40,40,40);
+$colorText1: whitesmoke;
+$colorBorder: whitesmoke;
+
+$h1Basis: 75%;
+
+$basicFontSize: 1rem;

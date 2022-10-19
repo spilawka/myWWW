@@ -1,0 +1,38 @@
+@import "__variables";
+@import "__mixins";
+
+%form-border {
+    font-size: 0.75*$basicFontSize;
+    border: 1px solid;
+    padding: 4px;
+    
+    border-radius: 8px;
+}
+
+%orange-border {
+    @extend %form-border;
+    border-color: $colorMain;
+}
+
+p#comment {
+    background-color: $colorContent;
+    border-radius: 16px;
+    padding: 6px;
+    padding-left: 12px;
+}
+
+p#add-comment {
+    font-weight: bold;
+}
+
+form#comment-form {
+    display: flex;
+    flex-direction: row;
+}
+input#comm {
+    @extend %orange-border;
+}
+
+input#post-comm {
+    @extend %orange-border;
+}

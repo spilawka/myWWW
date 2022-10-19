@@ -1,0 +1,27 @@
+@import "__variables";
+@import "__mixins";
+
+/**Kontenery z podświetlajacymi sie krawedziami*/
+.border {
+	border: 1px solid;
+	border-color: $colorBorder;
+	border-radius: 4px;
+	transition: border-color 1s;
+	&:hover {
+		border-color: $colorMain;
+	}
+}
+
+/**Klasa glownych kontenerow na stronie*/
+.main-container {
+	background-color: $colorContent;
+    	margin: 4px;
+    	padding: 6px;
+	@include mediaDim('L') {margin: 12px;};
+	@include mediaDim('XL') {margin: 20px;};
+}
+
+.hide-portrait {
+	display: none;
+	@include mediaDesc() {display: inline;};
+}

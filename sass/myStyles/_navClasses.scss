@@ -1,0 +1,77 @@
+@import "__variables";
+@import "__mixins";
+
+%a-deco {
+	transition: background-color 1s;
+    	text-decoration: initial;
+	&:hover {
+		background-color: $colorTransition;
+	}
+}
+
+a {
+	&:any-link {
+		color: inherit;
+	}
+	&.link {
+		@extend %a-deco;
+
+	}
+	&.hamburger-link {
+		display:none;
+		@include mediaDesc() {display: block;};
+		@extend %a-deco;
+	}
+	&#current-link {
+		transition: background-color 1s;
+		font-weight: bold;
+    		font-style: italic;
+	}
+
+}
+
+button#hamburger {
+	background-color: $colorMain;
+    	align-self:flex-start;
+    	border-color: $colorBackground;
+
+	@include mediaDesc() {display:none;};
+
+	img {
+		@include square(3*$basicFontSize);
+	}
+}
+
+aside#sidebar {
+	nav {
+		display: flex;
+    		flex-direction: column;
+    		flex-wrap:nowrap;
+    		align-items:center;
+    		background-color: $colorMain;
+
+		@include mediaDesc() {flex-direction:row;};
+
+		a {
+			border: 2px solid;
+    			border-color: $colorContent;
+    			border-top: 0px;
+    			text-align: center;
+    			padding: 10px;
+    			width: 100%;
+
+			@include mediaDesc() {
+				display: block;
+        			width:auto;
+        			border-bottom: 0px;
+        			border-left: 0px;
+				
+				&#last-link {
+					margin-left: auto;
+        				border-left: 2px solid;
+        				border-color: $colorContent;
+				}
+			}
+		}
+	}
+}

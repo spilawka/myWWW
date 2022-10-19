@@ -1,0 +1,26 @@
+//Mixin tworzy obiekt w kszałcie kwadratu o podanym boku
+@mixin square($width, $height: $width) {
+	width: $width;
+	height: $height;
+};
+
+//Mixin dodaje zapytania medialne w zaleznosci od wymiaru
+@mixin mediaDim($dimName) { @if map-has-key($dimensions,$dimName) {
+	$dim: map-get($dimensions,$dimName);
+	$tMin: map-get($dim,'min');
+	$tMax: map-get($dim,'max');
+	@if ($tMin < $tMax) {
+		@if ($tMin > 0) {
+			@media all and (min-width: $tMin) and (max-width: $tMax) {@content;}
+		} @else {
+			@media all and (max-width: $tMax) {@content;}
+		}
+	} @else {
+		@media all and (min-width: $tMin) {@content;}
+	}
+	
+}};
+
+@mixin mediaDesc() {
+	@media all and (min-width: map-get($breaks,'desktop-switch')) and (min-aspect-ratio: 1/1) {@content;}
+}

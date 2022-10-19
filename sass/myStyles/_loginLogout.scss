@@ -1,0 +1,54 @@
+@import "__variables";
+@import "__mixins";
+
+%form-border {
+    font-size: 0.75*$basicFontSize;
+    border: 1px solid;
+    padding: 4px;
+    
+    border-radius: 8px;
+}
+
+%orange-border {
+    @extend %form-border;
+    border-color: $colorMain;
+}
+
+%inv-border {
+    @extend %form-border;
+    border-color: $colorText1;
+}
+
+form{
+    &#login-form, &#logout-form{
+        flex-basis: 100% - $h1Basis;
+        margin-right: 24px;
+        border-radius: 24px;
+        background-color: $colorBackground;
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+    input {
+        @extend %orange-border;
+        margin: 6px;
+    }
+
+    
+    select {
+        @extend %inv-border;
+        background-color: $colorContent;
+        color: $colorText1;
+        margin: 6px;
+    }
+
+    p#error-msg {
+        color:red;
+    }
+
+    p#visits {
+
+    }
+}

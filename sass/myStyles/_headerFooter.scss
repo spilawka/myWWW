@@ -1,0 +1,32 @@
+@import "__variables";
+@import "__mixins";
+
+header#banner {
+	display: flex;
+	flex-direction: row;
+	img {
+		border-radius: 5*$basicFontSize;
+		@include square(10*$basicFontSize);
+	}
+}
+
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+	section {
+    		margin: 8px;
+	}
+
+	p {
+    		margin: 4px;
+    		padding: 8px;
+    		border-radius: 16px;
+    		background-color: $colorBackground;
+    		transition: background-color 1s;
+		&:hover {
+			background-color: $colorMain;
+		}
+	}
+}
